@@ -1,5 +1,7 @@
 :root {
   --primary-color: #1c819e;
+  --secondary-color: rgb(201, 201, 92);
+
   --primary-font: Ubuntu;
 }
 
@@ -9,9 +11,11 @@ html {
 
 .main-content {
   padding-top: 100px;
-  background-color: var(--primary-color);
+  background-color: var(--secondary-color);
 }
-
+.navbar {
+  background-color: #dcdfe5;
+}
 .nav-item {
   text-align: right;
   margin-left: 3px;
@@ -26,18 +30,12 @@ a:hover {
   box-shadow: inset 150px 0 0 0 var(--primary-color);
   border: transparent 0 solid;
   border-radius: 3px;
-  color: white !important;
-}
-
-@media (max-width: 920px) {
-  a:hover {
-    box-shadow: none;
-  }
 }
 
 .grow img {
   transition: 1s ease;
   border-radius: 5px;
+  border: var(--primary-color) 5px solid;
 }
 
 .grow img:hover {
@@ -52,31 +50,40 @@ a:hover {
   border: black 1px solid;
   border-radius: 3px;
 
-  color: black;
+  transform: scale(0);
+
   font-size: 16px;
   margin-top: -40px;
-  opacity: 0;
-  visibility: hidden;
   -webkit-transition: visibility 0s, opacity 0.5s linear;
   transition: visibility 0s, opacity 0.5s linear;
 }
 .grow:hover div {
   width: 250px;
   padding: 8px 15px;
+  transform: scale(1.2);
+  transition: 1s ease;
+  width: 250px;
+  padding: 8px 15px;
   visibility: visible;
   opacity: 0.8;
-}
-.gallery {
-  display: grid;
-  grid-template-columns: repeat(8, 1fr);
-  grid-template-rows: repeat(8, 5vw);
-  grid-gap: 5px;
+
+  transition: 1s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   margin-left: 150px;
 }
 
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: repeat(8, 8vw);
+}
+
 .gallery_img {
-  width: 60%;
-  height: 60%;
+  width: 80%;
+  height: 80%;
+  margin-left: 50px;
 }
 .gallery_item--1 {
   grid-column-start: 1;
@@ -107,4 +114,14 @@ a:hover {
   grid-column-end: 9;
   grid-row-start: 5;
   grid-row-end: 9;
+}
+
+@media (max-width: 920px) {
+  a:hover {
+    box-shadow: none;
+  }
+  .gallery {
+    display: contents;
+    margin-left: 100px;
+  }
 }

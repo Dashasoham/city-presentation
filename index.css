@@ -1,5 +1,7 @@
 :root {
   --primary-color: #1c819e;
+  --secondary-color: rgb(201, 201, 92);
+  --additional-color: #d4dab9;
   --primary-font: Ubuntu;
 }
 
@@ -7,10 +9,10 @@ html {
   background-color: var(--primary-color);
 }
 .main-div {
-  background-color: rgb(201, 201, 92);
+  background-color: var(--secondary-color);
 }
-form {
-  margin-top: 20px;
+.navbar {
+  background-color: var(--additional-color);
 }
 .nav-item {
   text-align: right;
@@ -26,7 +28,12 @@ a:hover {
   box-shadow: inset 150px 0 0 0 var(--primary-color);
   border: transparent 0 solid;
   border-radius: 3px;
-  color: white !important;
+}
+p .Donbas:hover {
+  box-shadow: inset 150px 0 0 0 black;
+  border: transparent 0 solid;
+  border-radius: 3px;
+  color: white;
 }
 
 @media (max-width: 920px) {
@@ -49,7 +56,12 @@ a:hover {
   bottom: 0;
   right: 0;
   max-height: 100vh;
-  opacity: 0.5;
+  opacity: 0.7;
+}
+
+.description-text p {
+  text-align: center;
+  color: black;
 }
 
 @media (max-width: 1641px) {
@@ -61,6 +73,12 @@ a:hover {
   }
 }
 @media (max-width: 915px) {
+  .description-text p {
+    position: absolute;
+    width: 40%;
+    background-color: var(--additional-color);
+    border-radius: 4px;
+  }
   .symbol {
     top: 140px;
   }

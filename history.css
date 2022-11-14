@@ -1,0 +1,89 @@
+:root {
+  --primary-color: #1c819e;
+  --secondary-color: rgb(201, 201, 92);
+  --additional-color: #d4dab9;
+  --primary-font: Ubuntu;
+}
+
+html {
+  background-color: var(--primary-color);
+}
+.main-div {
+  background-color: var(--primary-color);
+}
+.navbar {
+  background-color: var(--additional-color);
+}
+.nav-item {
+  text-align: right;
+  margin-left: 3px;
+}
+
+a {
+  box-shadow: inset 0 0 0 0 var(--primary-color);
+  transition: color 0.3s ease-in-out, box-shadow 0.3s ease-in-out !important;
+  border-radius: 2px;
+}
+a:hover {
+  box-shadow: inset 150px 0 0 0 var(--primary-color);
+  border: transparent 0 solid;
+  border-radius: 3px;
+}
+
+@media (max-width: 920px) {
+  a:hover {
+    box-shadow: none;
+  }
+}
+.scale-up-center p {
+  background-color: var(--secondary-color);
+  border-radius: 10px;
+  font-size: 20px;
+  padding: 10px;
+  margin: 15px auto 0;
+  max-width: 70vw;
+  padding-top: 100px;
+}
+
+.scale-up-center {
+  -webkit-animation: scale-up-center 1s cubic-bezier(0.39, 0.575, 0.565, 1) 0.3s
+    both;
+  animation: scale-up-center 1s cubic-bezier(0.39, 0.575, 0.565, 1) 0.3s both;
+}
+
+@-webkit-keyframes scale-up-center {
+  0% {
+    -webkit-transform: scale(0.5);
+    transform: scale(0.5);
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+@keyframes scale-up-center {
+  0% {
+    -webkit-transform: scale(0.5);
+    transform: scale(0.5);
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+.about-link {
+  color: var(--additional-color);
+  text-decoration: none;
+  font-size: 28px;
+
+  position: absolute;
+  top: 100%;
+  left: 40%;
+  padding: 5px;
+}
+.about-link:hover {
+  box-shadow: inset 200px 0 0 0 black;
+  border: transparent 0 solid;
+  border-radius: 3px;
+  color: white;
+}
